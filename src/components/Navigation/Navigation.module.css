@@ -1,0 +1,21 @@
+.link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.17;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.link:first-child {
+    margin-right: 57px;
+}
+
+.link:hover {
+    color: rgb(181, 250, 116);
+}
+.activeLink {
+    color: rgb(181, 250, 116);
+    border-bottom: 3px solid rgb(181, 250, 116);
+    text-decoration: none;
+}

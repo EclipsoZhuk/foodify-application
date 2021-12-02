@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.17;
+    color: #000000;
+}
+
+.Spinner {
+    position: absolute;
+    top: 15%;
+    right: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
