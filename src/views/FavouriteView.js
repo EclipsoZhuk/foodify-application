@@ -14,7 +14,14 @@ export default function FavouriteDishes() {
                     <CreateFavouriteDishes />
                 </Section>
             ) : (
-                <Typography component="h2" variant="h2">
+                <Typography
+                    style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                    }}
+                    component="h2"
+                    variant="h2"
+                >
                     No saved dishes at list
                 </Typography>
             )}
