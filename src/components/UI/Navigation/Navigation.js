@@ -1,18 +1,18 @@
 import { useMediaQuery, useTheme } from '@mui/material';
 import { NavLink, useLocation } from 'react-router-dom';
 import { Nav } from 'styles';
-import { Drawer } from './Drawer';
+// import { Drawer } from './Drawer';
 import s from './Navigation.module.css';
 
 const Navigation = () => {
     const { breakpoints } = useTheme();
-    const isMedium = useMediaQuery(breakpoints.down('md'));
     const { pathname } = useLocation();
+    const isMedium = useMediaQuery(breakpoints.down('md'));
 
     const isClassName = ({ isActive }) =>
         isActive ? `${s.activeLink} + ${s.link}` : `${s.link}`;
 
-    const addCustomDish = pathname.includes('favourites') ? <h1>ADD</h1> : null;
+    const AddCustomDish = pathname.includes('favourites') ? <h1>ADD</h1> : null;
 
     return (
         <Nav>
@@ -26,9 +26,9 @@ const Navigation = () => {
                     </NavLink>
                 </>
             ) : (
-                <Drawer />
+                <h1>Hello</h1>
             )}
-            {addCustomDish}
+            {AddCustomDish}
         </Nav>
     );
 };

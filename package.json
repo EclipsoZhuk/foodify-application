@@ -1,7 +1,6 @@
 {
     "name": "foodify-application",
     "version": "0.1.0",
-    "homepage": "https://EclipsoZhuk.github.io/foodify-application",
     "private": true,
     "dependencies": {
         "@emotion/react": "^11.7.0",
@@ -12,11 +11,12 @@
         "@testing-library/react": "^11.2.7",
         "@testing-library/user-event": "^12.8.3",
         "axios": "^0.23.0",
-        "gh-pages": "^3.2.3",
+        "framer-motion": "^5.3.3",
         "modern-normalize": "^1.1.0",
         "prop-types": "^15.7.2",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
+        "react-hook-form": "^7.20.5",
         "react-icons": "^4.3.1",
         "react-loader-spinner": "^4.0.0",
         "react-redux": "^7.2.6",
@@ -37,7 +37,7 @@
         "eject": "react-scripts eject",
         "prepare": "husky install",
         "predeploy": "npm run build",
-        "deploy": "gh-pages -d build"
+        "deploy": "netlify deploy -p"
     },
     "eslintConfig": {
         "extends": [
