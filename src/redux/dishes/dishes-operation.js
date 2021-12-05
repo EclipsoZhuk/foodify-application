@@ -4,18 +4,6 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 
 axios.defaults.baseURL = 'https://www.themealdb.com/api/json/v1/1/random.php';
 
-// export const getRandomDish = () => async dispatch => {
-//     dispatch(dishesAction.getRandomDishRequest());
-//     try {
-//         const { data } = await axios.get();
-//         console.log(data);
-//         return dispatch(dishesAction.getRandomDishSuccess(data));
-//     } catch ({ response }) {
-//         toast.error(response.statusText);
-//         dispatch(dishesAction.getRandomDishError(response.statusText));
-//     }
-// };
-
 export const fetchRandomDish = createAsyncThunk(
     'random/fetchRandomDish',
     async function (_, { rejectWithValue }) {

@@ -1,21 +1,23 @@
 import { useSelector } from 'react-redux';
-import { Grid, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import { getFavouritesDish } from 'redux/dishes/dishes-selectors';
+import { CreateFavouriteDishes } from 'components/UI/FavouriteDish/FavouriteDishes';
+import { Section } from 'styles';
 
 export default function FavouriteDishes() {
     const favourites = useSelector(getFavouritesDish);
 
     return (
-        <Grid container justify="flex-start" alignItems="center">
+        <>
             {favourites?.length > 0 ? (
-                <Typography component="h2" variant="h2">
-                    Тут что-то есть
-                </Typography>
+                <Section>
+                    <CreateFavouriteDishes />
+                </Section>
             ) : (
                 <Typography component="h2" variant="h2">
                     No saved dishes at list
                 </Typography>
             )}
-        </Grid>
+        </>
     );
 }

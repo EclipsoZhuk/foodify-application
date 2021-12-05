@@ -25,8 +25,14 @@ export default function CreateCard() {
     const favouritesDish = useSelector(getFavouritesDish);
 
     return (
-        <Card sx={{ maxWidth: 390 }}>
+        <Card
+            sx={{
+                maxWidth: 390,
+                boxShadow: '7px 16px 30px 0px rgba(77,108,217,0.65)',
+            }}
+        >
             <CardMedia
+                style={{ height: 234 }}
                 component={'img'}
                 image={
                     randomDish?.strMealThumb
@@ -73,7 +79,16 @@ export default function CreateCard() {
                         clickable
                     />
                 </div>
-                <Typography variant="body2" color="Scrollbar" component="p">
+                <Typography
+                    variant="body2"
+                    color="Scrollbar"
+                    style={{
+                        height: 200,
+                        overflow: 'auto',
+                        textOverflow: 'ellipsis',
+                    }}
+                    component="p"
+                >
                     {randomDish?.strInstructions}
                 </Typography>
             </CardContent>

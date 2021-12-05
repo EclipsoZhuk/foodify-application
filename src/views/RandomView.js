@@ -1,5 +1,5 @@
-import { ErrorNotification } from 'components/UI/ErrorNotification';
-import { MediaCard } from 'components/UI/MediaCard/MediaCard';
+import { ErrorNotification } from 'components/ErrorNotification';
+import { MediaCard } from 'components/UI/RandomDish/RandomDish';
 import { useSelector } from 'react-redux';
 import { getError } from 'redux/dishes/dishes-selectors';
 

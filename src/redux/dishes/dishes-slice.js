@@ -19,7 +19,6 @@ const dishesSlice = createSlice({
             };
         },
         addDish(state, { payload }) {
-            console.log(payload);
             return {
                 ...state,
                 favourites: [payload, ...state.favourites],

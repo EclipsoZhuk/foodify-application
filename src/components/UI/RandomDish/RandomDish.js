@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { Grid, Skeleton } from '@mui/material';
 import { getIsLoading } from 'redux/dishes/dishes-selectors';
-import CreateCard from './CreateCard';
+import CreateCard from './CreateDish';
 
 export const MediaCard = () => {
     const isLoading = useSelector(getIsLoading);

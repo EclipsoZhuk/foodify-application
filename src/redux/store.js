@@ -11,6 +11,7 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import dishesReducer from './dishes/dishes-slice';
+import { sideBarReducer } from './sideBar/sideBar-reducer';
 
 const dishesPersistConfig = {
     key: 'foodify',
@@ -21,6 +22,7 @@ const dishesPersistConfig = {
 export const store = configureStore({
     reducer: {
         dishes: persistReducer(dishesPersistConfig, dishesReducer),
+        sideBar: sideBarReducer,
     },
     middleware: getDefaultMiddleware =>
         getDefaultMiddleware({

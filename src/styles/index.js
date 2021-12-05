@@ -8,9 +8,13 @@ export const Nav = styled.nav`
 `;
 
 export const Main = styled.main`
+    padding-top: 20px;
+`;
+export const Section = styled.section`
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 70px;
+    flex-wrap: wrap;
+
+    justify-content: space-evenly;
+    padding: 0 15px;
+    padding-bottom: 15px;
 `;

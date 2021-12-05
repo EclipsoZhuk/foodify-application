@@ -1,7 +1,8 @@
 import { useMediaQuery, useTheme } from '@mui/material';
+import { AddDish } from 'components/AddDish';
 import { NavLink, useLocation } from 'react-router-dom';
 import { Nav } from 'styles';
-// import { Drawer } from './Drawer';
+import { UiDrawer } from './Drawer';
 import s from './Navigation.module.css';
 
 const Navigation = () => {
@@ -12,7 +13,7 @@ const Navigation = () => {
     const isClassName = ({ isActive }) =>
         isActive ? `${s.activeLink} + ${s.link}` : `${s.link}`;
 
-    const AddCustomDish = pathname.includes('favourites') ? <h1>ADD</h1> : null;
+    const AddCustomDish = pathname.includes('favourites') ? <AddDish /> : null;
 
     return (
         <Nav>
@@ -26,7 +27,7 @@ const Navigation = () => {
                     </NavLink>
                 </>
             ) : (
-                <h1>Hello</h1>
+                <UiDrawer />
             )}
             {AddCustomDish}
         </Nav>
